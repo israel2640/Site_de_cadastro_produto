@@ -1,95 +1,116 @@
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #f2f2f2;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 20px;
-}
-
-.form-container {
-  background: #fff;
-  padding: 35px 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  max-height: 90vh;
-  overflow-y: auto;
-  transition: all 0.3s ease;
-}
-
-h2 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.product-form {
+  background-color: #f6f8fa;
+  color: #2c3e50;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
+/* Containers */
+.form-container,
+.table-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* Títulos */
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Formulário */
 .product-form label {
-  font-size: 14px;
-  color: #444;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #374151;
 }
 
 .product-form input,
 .product-form textarea {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  transition: border-color 0.3s ease;
+  background-color: #f9fafb;
+  font-size: 0.95rem;
+  transition: border 0.3s;
 }
 
 .product-form input:focus,
 .product-form textarea:focus {
-  border-color: #0077ff;
+  border-color: #2563eb;
   outline: none;
 }
 
+/* Botões */
 .button-group {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 20px;
 }
 
-.button-group button {
+button {
   flex: 1;
-  padding: 12px;
-  font-size: 14px;
+  padding: 12px 18px;
+  background-color: #2563eb;
+  color: white;
   border: none;
   border-radius: 8px;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.button-group button[type="submit"] {
-  background-color: #0077ff;
-  color: white;
+button:hover {
+  background-color: #1d4ed8;
 }
 
-.button-group button[type="submit"]:hover {
-  background-color: #005fcc;
+button[type="reset"] {
+  background-color: #e11d48;
 }
 
-.button-group button[type="reset"] {
-  background-color: #e0e0e0;
-  color: #333;
+button[type="reset"]:hover {
+  background-color: #be123c;
 }
 
-.button-group button[type="reset"]:hover {
-  background-color: #c4c4c4;
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #e5e7eb;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background-color: #f3f4f6;
 }
